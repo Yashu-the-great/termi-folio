@@ -11,6 +11,7 @@ void loadingBar(int to, char about[])
 	{
 		printf("#");
 	}
+	for(int j = to/2;j<50;j++)
 	{
 		printf(" ");
 	}
