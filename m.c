@@ -6,6 +6,7 @@
 void loadingBar(int to, char about[])
 { 
 	printf("%s [", about);
+	printf("\033[0;34m");
 	for(int i =0;i < to/2;i++)
 	{
 		printf("#");
@@ -14,6 +15,7 @@ void loadingBar(int to, char about[])
 	{
 		printf(" ");
 	}
+	printf("\033[0m");
 	printf(" %i%s ] ", to,"%");
 	printf("\n");
 }
@@ -25,7 +27,7 @@ int len(char *s) {
 	while (s[c] != '\0')
 	{
 		c++;
-	}   
+	}  
 	return c;
 } 
 
@@ -62,6 +64,7 @@ void main_pro(char *cmd)
 
 
 	}
+
 	else{
 		printf("wrong input: dont know about '%s'\n", cmd);
 	}
