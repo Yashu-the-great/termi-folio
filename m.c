@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h> 
+#include <unistd.h>
 #include "loadingBar.h"
-    
+#include "timer.h" 
 //*********************************************
 
 int len(char *s) {
@@ -45,10 +45,12 @@ void main_pro(char *cmd)
 		loadingBar(90, "iOS");
 		usleep(1000);
 		loadingBar(60, "C");
-
-
 	}
-
+	else if(strcmp(cmd,"timer") == 0)
+	{
+		printf("starting the timer \n\n");
+		timer();
+	}
 	else{
 		printf("wrong input: dont know about '%s'\n", cmd);
 	}
