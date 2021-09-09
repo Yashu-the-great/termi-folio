@@ -4,6 +4,11 @@
 #include <unistd.h>
 #include "loadingBar.h"
 #include "timer.h" 
+
+//global variables declared here//
+
+char *ty = ">>>";
+
 //*********************************************
 
 int len(char *s) {
@@ -51,6 +56,13 @@ void main_pro(char *cmd)
 		printf("starting the timer \n\n");
 		timer();
 	}
+	else if(strcmp(cmd,"zsh") == 0)
+	{
+		ty = "~$/";
+	}
+	else if(strcmp(cmd,"bash") == 0){
+		ty = ">>>";
+	}
 	else{
 		printf("wrong input: dont know about '%s'\n", cmd);
 	}
@@ -62,9 +74,10 @@ int main(int argc, char const *argv[])
 {
 	char cmd[100];
 	system("figlet Welcome Mr. Maurya");
+	
 	while(1)
 	{
-		printf(">>> ");
+		printf("%s ", ty);
 		scanf("%s",cmd);
 		main_pro(cmd);
 		printf("\033[0m"); 
