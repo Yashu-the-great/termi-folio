@@ -72,6 +72,7 @@ void main_pro(char *cmd)
 	}
 	else if(strcmp(cmd,"timer") == 0)
 	{
+		printf("Starting the timer.......\n");
 		timer();
 	}
 	else if(strcmp(cmd,"zsh") == 0)
