@@ -81,10 +81,15 @@ void main_pro(char *cmd)
 	}
 	else if(strcmp(cmd,"bash") == 0){
 		ty = ">>>";
-	}	
+	}
+	else if(strcmp(cmd,"safari") == 0)
+	{	
+		system("open /Applications/Safari.app");
+	}
 	else{
 		printf("wrong input: dont know about '%s'\n", cmd);
 	}
+
 }
 
 //********************************************
